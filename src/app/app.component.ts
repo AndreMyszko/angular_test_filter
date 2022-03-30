@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   searchText = '';
+  searchType = '';
+  searchAbility = '';
   characters = [
     {
       name: 'picachu',

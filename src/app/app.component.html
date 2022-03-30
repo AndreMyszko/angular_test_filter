@@ -4,16 +4,16 @@
 <div class="form-group">
   <input [(ngModel)]="searchText" placeholder="name">
 </div>
-<!-- <div class="form-group">
+<div class="form-group">
   <input [(ngModel)]="searchType" placeholder="type">
 </div>
 <div class="form-group">
   <input [(ngModel)]="searchAbility" placeholder="ability">
-</div> -->
+</div>
 
 <!-- list -->
 <ul>
-  <li *ngFor="let c of characters | appFilter: searchText">
+  <li *ngFor="let c of characters | appFilter:  [searchText, searchType, searchAbility] ">
     {{c.name}} | {{c.type}} | {{c.ability}}
   </li>
 </ul>
